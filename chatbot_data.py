@@ -1,21 +1,21 @@
 ########################################################################################################################################
-# คำถาม
+# คำถาม (เพิ่มคำลงท้ายลงไป ทำให้ machine learning มีรูปแบบในการ predicted มากขึ้น)
 greetings = ["สวัสดี", "สวัสดีครับ", "สวัสดีค่ะ"]
 goodbyes = ["บาย", "ลาก่อน", "ลาก่อนครับ", "ลาก่อนค่ะ", "โชคดี", "โชคดีครับ", "โชคดีค่ะ"]
-name = ["คุณชื่ออะไร", "ชื่ออะไร", "สิ่งนี้ชื่ออะไร", "ชื่อของคุณคืออะไร"]
-who = ["คุณคือใคร", "สิ่งนี้คืออะไร", "คุณคืออะไร", "คุณเป็นใคร"]
-calculators = ["คำนวณ", "คิดเลข", "ทำ", "ทำให้หน่อย"]
-date = ["วันนี้วันที่เท่าไหร่", "วันนี้วันอะไร", "วันที่เท่าไหร่"]
-time = ["ตอนนี้กี่โมง", "ตอนนี้เวลาอะไร", "กี่โมงแล้ว"]
-MLis = ["Machine Learning คืออะไร","Machine Learning คือ"]
-MLcando = ["Machine Learning ทำอะไรได้บ้าง","Machine Learning ทำอะไรได้"]
-NOTGateis = ["NOTGate คืออะไร","NOTGate คือ","NOT Gate คืออะไร","NOT Gate คือ"]
-ANDGateis = ["ANDGate คืออะไร","ANDGate คือ","AND Gate คืออะไร","AND Gate คือ"]
-ORGateis = ["ORGate คืออะไร","ORGate คือ","OR Gate คืออะไร","OR Gate คือ"]
-NANDGateis = ["NANDGate คืออะไร","NANDGate คือ","NAND Gate คืออะไร","NAND Gate คือ"]
-NORGateis = ["NORGate คืออะไร","NORGate คือ","NOR Gate คืออะไร","NOR Gate คือ"]
-XORGateis = ["XORGate คืออะไร","XORGate คือ","XOR Gate คืออะไร","XOR Gate คือ"]
-XNORGateis = ["XNORGate คืออะไร","XNORGate คือ","XNOR Gate คืออะไร","XNOR Gate คือ"]
+name = ["คุณชื่ออะไร","คุณชื่ออะไรครับ","คุณชื่ออะไรค่ะ", "ชื่ออะไร","ชื่ออะไรครับ","ชื่ออะไรค่ะ", "ชื่อของคุณคืออะไร","ชื่อของคุณคืออะไรครับ","ชื่อของคุณคืออะไรค่ะ",]
+who = ["คุณคือใคร","คุณคือใครครับ","คุณคือใครค่ะ", "คุณคืออะไร","คุณคืออะไรครับ","คุณคืออะไรครับ", "คุณเป็นใคร","คุณเป็นใครครับ","คุณเป็นใครค่ะ"]
+calculators = ["คำนวณให้หน่อย","คำนวณให้หน่อยครับ","คำนวณให้หน่อยค่ะ", "คิดเลขให้หน่อย","คิดเลขให้หน่อยครับ","คิดเลขให้หน่อยค่ะ","ทำให้หน่อย","ทำให้หน่อยครับ","ทำให้หน่อยค่ะ"]
+date = ["วันนี้วันที่เท่าไหร่","วันนี้วันที่เท่าไหร่ครับ","วันนี้วันที่เท่าไหร่ค่ะ", "วันนี้วันอะไร","วันนี้วันอะไรครับ","วันนี้วันอะไรค่ะ"]
+time = ["ตอนนี้กี่โมง","ตอนนี้กี่โมงครับ","ตอนนี้กี่โมงค่ะ", "ตอนนี้เวลาอะไร","ตอนนี้เวลาอะไรครับ","ตอนนี้เวลาอะไรค่ะ", "กี่โมงแล้ว","กี่โมงแล้วครับ","กี่โมงแล้วค่ะ",]
+MLis = ["Machine Learning คืออะไร","Machine Learning คืออะไรครับ","Machine Learning คืออะไรค่ะ","Machine Learning คือ"]
+MLcando = ["Machine Learning ทำอะไรได้บ้าง","Machine Learning ทำอะไรได้บ้างครับ","Machine Learning ทำอะไรได้บ้างค่ะ","Machine Learning ทำอะไรได้","Machine Learning ทำอะไรได้ครับ","Machine Learning ทำอะไรได้ค่ะ"]
+NOTGateis = ["NOTGate คืออะไร","NOTGate คืออะไรครับ","NOTGate คืออะไรค่ะ","NOTGate คือ","NOT Gate คืออะไร","NOT Gate คืออะไรครับ","NOT Gate คืออะไรค่ะ","NOT Gate คือ"]
+ANDGateis = ["ANDGate คืออะไร","ANDGate คืออะไรครับ","ANDGate คืออะไรค่ะ","ANDGate คือ","AND Gate คืออะไร","AND Gate คืออะไรครับ","AND Gate คืออะไรค่ะ","AND Gate คือ"]
+ORGateis = ["ORGate คืออะไร","ORGate คืออะไรครับ","ORGate คืออะไรค่ะ","ORGate คือ","OR Gate คืออะไร","OR Gate คืออะไรครับ","OR Gate คืออะไรค่ะ","OR Gate คือ"]
+NANDGateis = ["NANDGate คืออะไร","NANDGate คืออะไรครับ","NANDGate คืออะไรค่ะ","NANDGate คือ","NAND Gate คืออะไร","NAND Gate คืออะไรครับ","NAND Gate คืออะไรค่ะ","NAND Gate คือ"]
+NORGateis = ["NORGate คืออะไร","NORGate คืออะไรครับ","NORGate คืออะไรค่ะ","NORGate คือ","NOR Gate คืออะไร","NOR Gate คืออะไรครับ","NOR Gate คืออะไรค่ะ","NOR Gate คือ"]
+XORGateis = ["XORGate คืออะไร","XORGate คืออะไรครับ","XORGate คืออะไรค่ะ","XORGate คือ","XOR Gate คืออะไร","XOR Gate คืออะไรครับ","XOR Gate คืออะไรค่ะ","XOR Gate คือ"]
+XNORGateis = ["XNORGate คืออะไร","XNORGate คืออะไรครับ","XNORGate คืออะไรค่ะ","XNORGate คือ","XNOR Gate คืออะไร","XNOR Gate คืออะไรครับ","XNOR Gate คืออะไรค่ะ","XNOR Gate คือ"]
 
 # สามารถเพิ่มคำถามได้อีก
 

@@ -69,10 +69,6 @@ def chatbot_response(question):
     for pronoun in pronouns_to_replace:
         if pronoun in question:
             question = re.sub(r'\b' + pronoun + r'\b', 'คุณ', question)
-    
-    # ตรวจสอบหาคำว่า "ชื่อ"  
-    if re.search(r'\bชื่อ\b', question):
-        predicted_category = "name"
 
     # ทำการทำนาย Predicted
     else:
@@ -90,6 +86,9 @@ def chatbot_response(question):
         response = random.choice(response_thai["who_responses"])
     elif predicted_category == "คำนวณค่าคณิตศาสตร์":
         expression = re.sub(r'\bคำนวณ|คิดเลข\b', '', question)
+
+        # ลบตัวอักษรที่ไม่ใช่ตัวเลขและเครื่องหมายคณิตศาสตร์
+        expression = re.sub(r'[^0-9+\-*/()]', '', expression)
         response = calculate(expression)
     elif predicted_category == "วันที่เท่าไหร่":
         response = get_date()
@@ -126,6 +125,9 @@ def chatbot_response(question):
         response = random.choice(response_eng["who_responses_eng"])
     elif predicted_category == "Calculate":
         expressionEng = re.sub(r'\bCalculate|calculate\b', '', question)
+
+        # Delete non-numeric characters and math symbols.
+        expressionEng = re.sub(r'[^0-9+\-*/()]', '', expressionEng)
         response = calculateEng(expressionEng)
     elif predicted_category == "What date?":
         response = get_date_eng()
@@ -186,12 +188,12 @@ scrollbar.grid(row=0, column=1, rowspan=2, sticky="ns", in_=root)
 
 # ปรับค่าให้ Scrollbar อยู่ชิดขอบล่าง
 scrollbar.config(command=chat_text.yview, orient=tk.VERTICAL)
-chat_text.config(yscrollcommand=scrollbar.set, font=("Arial", 30))
+chat_text.config(yscrollcommand=scrollbar.set, font=("Arial", 20)) # ปรับ font เพิ่มขนาดตัวอักษร
 
 input_text = tk.Entry(root)
 input_text.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="ew", ipady=2)
 
-send_button = tk.Button(root, text="Send", command=send_message, bg="blue", fg="white")
+send_button = tk.Button(root, text="Send", command=send_message, bg="blue", fg="white") # ปรับปุ่มเป็นสีฟ้า ตัวอักษรสีขาว
 send_button.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="e")  # ปรับค่า ipady ตามความสูงที่ต้องการ
 
 # ใช้งานปุ่ม Enter เพื่อส่งข้อความ
