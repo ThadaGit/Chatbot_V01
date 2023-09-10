@@ -61,7 +61,22 @@ def chatbot_response(question):
         response = TranslatorThaitoEng_response(text_to_translate)                
         return response
 
-    predicted_category = model.predict([question])[0]
+
+    # แปลงสรรพนามเป็น "คุณ"
+    pronouns_to_replace = ["คุณ", "นาย", "ท่าน", "เธอ"]
+
+    # ตรวจสอบและแทนคำสรรพนาม
+    for pronoun in pronouns_to_replace:
+        if pronoun in question:
+            question = re.sub(r'\b' + pronoun + r'\b', 'คุณ', question)
+    
+    # ตรวจสอบหาคำว่า "ชื่อ"  
+    if re.search(r'\bชื่อ\b', question):
+        predicted_category = "name"
+
+    # ทำการทำนาย Predicted
+    else:
+        predicted_category = model.predict([question])[0]
     
     ####################################################################################################################################
     # response thai
@@ -171,7 +186,7 @@ scrollbar.grid(row=0, column=1, rowspan=2, sticky="ns", in_=root)
 
 # ปรับค่าให้ Scrollbar อยู่ชิดขอบล่าง
 scrollbar.config(command=chat_text.yview, orient=tk.VERTICAL)
-chat_text.config(yscrollcommand=scrollbar.set)
+chat_text.config(yscrollcommand=scrollbar.set, font=("Arial", 30))
 
 input_text = tk.Entry(root)
 input_text.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="ew", ipady=2)
